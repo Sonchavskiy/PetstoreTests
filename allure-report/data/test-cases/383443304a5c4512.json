@@ -1,0 +1,73 @@
+{
+  "uid" : "383443304a5c4512",
+  "name" : "testMain",
+  "fullName" : "api.MainTest.testMain",
+  "historyId" : "dfbd68d8c35d7f3a6fc160b562edc1ee",
+  "time" : {
+    "start" : 1703191613277,
+    "stop" : 1703191613303,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "api.MainTest"
+  }, {
+    "name" : "testClass",
+    "value" : "api.MainTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testMain"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "PetstoreTests"
+  }, {
+    "name" : "subSuite",
+    "value" : "api.MainTest"
+  }, {
+    "name" : "host",
+    "value" : "Best-Komp"
+  }, {
+    "name" : "thread",
+    "value" : "11864@Best-Komp.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "sonya"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "390bf06056a2a7ab",
+      "status" : "passed",
+      "time" : {
+        "start" : 1703188986200,
+        "stop" : 1703188986223,
+        "duration" : 23
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "383443304a5c4512.json",
+  "parameterValues" : [ "sonya" ]
+}

@@ -1,0 +1,43 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Default Suite",
+    "children" : [ {
+      "name" : "PetstoreTests",
+      "children" : [ {
+        "name" : "api.MainTest",
+        "children" : [ {
+          "name" : "testMain",
+          "uid" : "383443304a5c4512",
+          "parentUid" : "8c191ffa4bee6f8cfa140c16b670a5bc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1703191613277,
+            "stop" : 1703191613303,
+            "duration" : 26
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "sonya" ]
+        }, {
+          "name" : "testMain",
+          "uid" : "2a866ebdb4b41630",
+          "parentUid" : "8c191ffa4bee6f8cfa140c16b670a5bc",
+          "status" : "passed",
+          "time" : {
+            "start" : 1703191613801,
+            "stop" : 1703191613815,
+            "duration" : 14
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "sereja" ]
+        } ],
+        "uid" : "8c191ffa4bee6f8cfa140c16b670a5bc"
+      } ],
+      "uid" : "0858223f962668612abf2e58574a77a3"
+    } ],
+    "uid" : "8399274b4bb69ec8699907dd6ef7de4e"
+  } ]
+}

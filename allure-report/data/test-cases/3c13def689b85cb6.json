@@ -1,0 +1,63 @@
+{
+  "uid" : "3c13def689b85cb6",
+  "name" : "testMain",
+  "fullName" : "api.MainTest.testMain",
+  "historyId" : "9cb56ee1e7e1bfe02d9598be4b75a341",
+  "time" : {
+    "start" : 1703188986494,
+    "stop" : 1703188986499,
+    "duration" : 5
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "api.MainTest"
+  }, {
+    "name" : "testClass",
+    "value" : "api.MainTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testMain"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "PetstoreTests"
+  }, {
+    "name" : "subSuite",
+    "value" : "api.MainTest"
+  }, {
+    "name" : "host",
+    "value" : "Best-Komp"
+  }, {
+    "name" : "thread",
+    "value" : "11020@Best-Komp.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "sereja"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3c13def689b85cb6.json",
+  "parameterValues" : [ "sereja" ]
+}
