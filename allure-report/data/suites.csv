@@ -1,3 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Dec 21 23:46:53 MSK 2023","Thu Dec 21 23:46:53 MSK 2023","14","Default Suite","PetstoreTests","api.MainTest","api.MainTest","testMain","testMain",""
-"passed","Thu Dec 21 23:46:53 MSK 2023","Thu Dec 21 23:46:53 MSK 2023","26","Default Suite","PetstoreTests","api.MainTest","api.MainTest","testMain","testMain",""
+"passed","Thu Dec 21 23:46:53 MSK 2023","Thu Dec 21 23:46:53 MSK 2023","14","Default Suite","PetstoreTests","tests.MainTest","tests.MainTest","testMain","testMain",""
+"passed","Thu Dec 21 23:46:53 MSK 2023","Thu Dec 21 23:46:53 MSK 2023","26","Default Suite","PetstoreTests","tests.MainTest","tests.MainTest","testMain","testMain",""

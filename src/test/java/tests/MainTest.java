@@ -1,4 +1,4 @@
-package api;
+package tests;
 
 import dataModels.Pet;
 import io.qameta.allure.*;
@@ -10,7 +10,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.testng.Assert.*;
 
 public class MainTest {
 //    @Step("step1")
