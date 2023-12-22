@@ -10,6 +10,15 @@ public class Order {
     public String status;
     public Boolean complete;
 
+    public Order(Integer id, Integer petId, Integer quantity, Date shipDate, String status, Boolean complete) {
+        this.id = id;
+        this.petId = petId;
+        this.quantity = quantity;
+        this.shipDate = shipDate;
+        this.status = status;
+        this.complete = complete;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
