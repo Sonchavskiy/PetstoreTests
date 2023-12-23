@@ -1,18 +1,16 @@
 package dataModels;
 
-import java.util.Arrays;
-
 public class User {
-    public Integer id;
+    public Object id;
     public String username;
     public String firstName;
     public String lastName;
     public String email;
     public String password;
     public String phone;
-    public Integer userStatus;
+    public Object userStatus;
 
-    public User(Integer id, String username, String firstName, String lastName, String email, String password, String phone, Integer userStatus) {
+    public User(Object id, String username, String firstName, String lastName, String email, String password, String phone, Object userStatus) {
         this.id = id;
         this.username = username;
         this.firstName = firstName;

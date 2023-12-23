@@ -1,10 +1,10 @@
 package dataModels;
 
 public class Category {
-    public Integer id;
+    public Object id;
     public String name;
 
-    public Category(Integer id, String name) {
+    public Category(Object id, String name) {
         this.id = id;
         this.name = name;
     }

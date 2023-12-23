@@ -3,14 +3,14 @@ package dataModels;
 import java.util.Date;
 
 public class Order {
-    public Integer id;
-    public Integer petId;
-    public Integer quantity;
+    public Object id;
+    public Object petId;
+    public Object quantity;
     public Date shipDate;
     public String status;
     public Boolean complete;
 
-    public Order(Integer id, Integer petId, Integer quantity, Date shipDate, String status, Boolean complete) {
+    public Order(Object id, Object petId, Object quantity, Date shipDate, String status, Boolean complete) {
         this.id = id;
         this.petId = petId;
         this.quantity = quantity;

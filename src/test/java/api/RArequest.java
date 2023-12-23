@@ -6,9 +6,7 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.internal.RequestSpecificationImpl;
-import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
-import io.restassured.response.ValidatableResponseLogSpec;
 import org.testng.Assert;
 
 import java.lang.reflect.Type;

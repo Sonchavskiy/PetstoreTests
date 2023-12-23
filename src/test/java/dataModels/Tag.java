@@ -1,10 +1,10 @@
 package dataModels;
 
 public class Tag {
-    public Integer id;
+    public Object id;
     public String name;
 
-    public Tag(Integer id, String name) {
+    public Tag(Object id, String name) {
         this.id = id;
         this.name = name;
     }
