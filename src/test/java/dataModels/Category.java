@@ -9,6 +9,9 @@ public class Category {
         this.name = name;
     }
 
+    public Category() {
+    }
+
     @Override
     public String toString() {
         return "Category{" +

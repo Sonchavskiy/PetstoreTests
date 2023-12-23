@@ -19,6 +19,18 @@ public class Order {
         this.complete = complete;
     }
 
+    public Order() {
+    }
+
+    public static Order defaultOrder() {
+        return new Order(1984,
+                20,
+                2,
+                new Date(121212L),
+                "placed",
+                true);
+    }
+
     @Override
     public String toString() {
         return "Order{" +

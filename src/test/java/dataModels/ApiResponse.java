@@ -11,6 +11,10 @@ public class ApiResponse {
         this.message = message;
     }
 
+    public ApiResponse() {
+    }
+
+
     @Override
     public String toString() {
         return "ApiResponse{" +

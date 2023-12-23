@@ -30,26 +30,30 @@ public class RArequest {
     }
     @Step("Send GET request")
     public static ValidatableResponse sendGetRequest(String url) {
-        ValidatableResponse response = given().when().get(url).then().log().body();
-        logRequest("GET", url, null, response);
+        logRequest("GET", url, null);
+        ValidatableResponse response = given().when().get(url).then();
+        logResponse(response);
         return response;
     }
     @Step("Send DELETE request")
     public static ValidatableResponse sendDeleteRequest(String url) {
-        ValidatableResponse response = given().when().delete(url).then().log().body();
-        logRequest("DELETE", url, null, response);
+        logRequest("DELETE", url, null);
+        ValidatableResponse response = given().when().delete(url).then();
+        logResponse(response);
         return response;
     }
     @Step("Send POST request")
     public static ValidatableResponse sendPostRequest(String url, Object args) {
-        ValidatableResponse response = given().body(args).when().post(url).then().log().body();
-        logRequest("POST", url, null, response);
+        logRequest("POST", url, args);
+        ValidatableResponse response = given().body(args).when().post(url).then();
+        logResponse(response);
         return response;
     }
     @Step("Send PUT request")
     public static ValidatableResponse sendPutRequest(String url, Object args) {
-        ValidatableResponse response = given().body(args).when().put(url).then().log().body();
-        logRequest("PUT", url, null, response);
+        logRequest("PUT", url, args);
+        ValidatableResponse response = given().body(args).when().put(url).then();
+        logResponse(response);
         return response;
     }
     @Step("Parse response to DataClass")
@@ -73,14 +77,26 @@ public class RArequest {
     @Step("Validate response code")
     public static void validateCode(int expectedCode, ValidatableResponse response) {
         Assert.assertEquals(response.extract().statusCode(), expectedCode, "Unexpected response status code:");
+        System.out.println("\nValidation successful for response status code");
     }
-    private static void logRequest(String method, String url, Object args, ValidatableResponse response) {
+    @Step("Validate data fields")
+    public static void validateData(Object expected, Object actual) {
+        Assert.assertEquals(actual.toString(),expected.toString(), "Mismatching data:");
+        System.out.println("\nValidation successful for data fields");
+    }
+    private static void logRequest(String method, String url, Object args) {
         String fullUrl = ((RequestSpecificationImpl) RestAssured.requestSpecification).getBaseUri() + url;
         String request = "\tMethod: " + method + "\n\tURL: " + fullUrl;
         if (args !=null) request += "\n\tArguments: " + args.toString();
         Allure.attachment("Request:", request);
-        String resp = "\tStatus: "+response.extract().statusLine() + "\tContent: " + response.extract().body().asString();
-        Allure.attachment("Response:",resp);
+        System.out.println("\nRequest:\n" + request);
+    }
+    private static void logResponse(ValidatableResponse response) {
+        String status = "\tStatus: "+response.extract().statusLine();
+        String content =  "\tContent: " + response.extract().body().asString();
+        Allure.attachment("Response:",status + content);
+        System.out.println("\nResponse:");
+        response.log().all();
     }
     private static void logData(Object data) {
         System.out.println("\nParsed object: \n\t" + data.toString());

@@ -1,5 +1,7 @@
 package dataModels;
 
+import java.util.Arrays;
+
 public class User {
     public Integer id;
     public String username;
@@ -19,6 +21,20 @@ public class User {
         this.password = password;
         this.phone = phone;
         this.userStatus = userStatus;
+    }
+
+    public User() {
+    }
+
+    public static User defaultUser() {
+        return new User(1984,
+                "ivan",
+                "ivanovich",
+                "ivanov",
+                "i.i.ivanov@gmail.com",
+                "123456",
+                "88888888888",
+                0);
     }
 
     @Override

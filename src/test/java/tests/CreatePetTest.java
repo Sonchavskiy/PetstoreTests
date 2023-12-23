@@ -12,7 +12,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import static api.PetStoreAPI.addPet;
-import static api.PetStoreAPI.getPet;
+import static api.PetStoreAPI.getPetById;
+import static api.RArequest.validateData;
 import static io.qameta.allure.util.ResultsUtils.TAG_LABEL_NAME;
 
 public class CreatePetTest extends AbstractTest{
@@ -21,24 +22,21 @@ public class CreatePetTest extends AbstractTest{
 
     @DataProvider
     public static Object[][] dataPCr12(){
-        return new Object[][] {{1}};
+        return new Object[][] {{"123"},{"0"},{"abc"}};
     }
 
     @Test(testName = feature, dataProvider = "dataPCr12")
     @Parameters({"ID"})
-    public void TC_PCr12(Integer id) {
+    public void TC_PCr12(Object id) {
         testDoc(epic, feature, true,
                 "Create pet (valid non-existing id)",
-                "Add pet (valid non-existing id) and check it doesn't exist.");
-        Pet petToSend = new Pet(id,
-                new Category(1, "dog"),
-                "puppy",
-                Arrays.asList("some/url", "someoher/url"),
-                Arrays.asList( new Tag(1, "white dog"),new Tag(2, "labrador")),
-                "available");
+                "Add pet (with valid non-existing id) and check that it is created and matches initial request.");
+        Pet petToSend = Pet.defaultPet();
+        petToSend.id = id;
         Object petReceivedFromPost = addPet(petToSend, 200);
-
-        Object petReceivedFromGet = getPet(id, 200);
+        validateData(petToSend, petReceivedFromPost);
+        Object petReceivedFromGet = getPetById(id, 200);
+        validateData(petToSend, petReceivedFromGet);
     }
 
 
