@@ -46,13 +46,11 @@ public class PetStoreAPI {
         return (expectedStatus == 200) ? getObject(response, Pet.class) : getObject(response, ApiResponse.class);
     }
 
-
-
     @Step("Delete pet")
-    public static Object deletePet(Object id, int expectedStatus) {
+    public static Object deletePet(Object id, int expectedStatus, Boolean noParse) {
         ValidatableResponse response = sendDeleteRequest("pet/" + id);
         validateCode(expectedStatus, response);
-        return (expectedStatus == 200) ? getObject(response, Pet.class) : getObject(response, ApiResponse.class);
+        return (response.extract().body().asString()=="" || noParse)? null : getObject(response, ApiResponse.class);
     }
 
     @Step("Get order by id")

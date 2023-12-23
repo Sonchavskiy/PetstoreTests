@@ -26,12 +26,22 @@ public class Pet {
     public static Pet defaultPet() {
         return new Pet(1984,
                 new Category(1, "dog"),
-                "puppy",
+                "Sharik",
                 Arrays.asList("some/url",
                         "someother/url"),
                 Arrays.asList(new Tag(1, "white dog"),
                         new Tag(2, "labrador")),
                 "available");
+    }
+
+    public static Pet anotherPet() {
+        return new Pet(1337,
+                new Category(2, "cat"),
+                "Behemot",
+                Arrays.asList("google.com/photo1.png",
+                        "google.com/photo2.png"),
+                Arrays.asList(new Tag(13, "black cat")),
+                "pending");
     }
 
     @Override

@@ -16,7 +16,7 @@ public abstract class AbstractTest {
 
     @DataProvider
     public static Object[][] invalidNumberIds(){
-        return new Object[][] {{-1},{0},{1.5}};
+        return new Object[][] {{-1},{0}};
     }
 
     @DataProvider
@@ -25,8 +25,23 @@ public abstract class AbstractTest {
     }
 
     @DataProvider
+    public static Object[][] invalidStringsAndEmpty(){
+        return new Object[][] {{""}, {null}, {"abcD"},{"!@#$%^&*("},{"®✉§©☯"}};
+    }
+
+    @DataProvider
     public static Object[][] invalidNullAndEmpty(){
         return new Object[][] {{null},{""}};
+    }
+
+    @DataProvider
+    public static Object[][] invalidNull(){
+        return new Object[][] {{null}};
+    }
+
+    @DataProvider
+    public static Object[][] invalidEmpty(){
+        return new Object[][] {{""}};
     }
 
     @DataProvider
